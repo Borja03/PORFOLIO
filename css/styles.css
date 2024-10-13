@@ -323,3 +323,24 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
+
+.project-container {
+    width: 250px; /* Ajusta el ancho como desees */
+    border: 2px solid #ecf0f1; /* Color del borde */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: center; /* Centrar el texto */
+    transition: transform 0.3s; /* Transición suave para el contenedor */
+}
+
+.project-container:hover {
+    transform: scale(1.05); /* Efecto de escalado al hacer hover */
+}
+
+.project img {
+    width: 100%; /* Hacer que la imagen ocupe el 100% del contenedor */
+    height: auto; /* Mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
