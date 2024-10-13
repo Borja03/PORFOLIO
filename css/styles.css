@@ -5,14 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Estilo general */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado de azul eléctrico a morado */
+    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado inicial */
     color: #ecf0f1; /* Color del texto en un tono claro */
     padding: 0; /* Eliminar el padding para el body */
+    transition: background 1s ease; /* Suaviza la transición del fondo */
 }
+
 
 /* Header */
 header {
