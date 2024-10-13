@@ -9,17 +9,29 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado de azul eléctrico a morado */
+    color: #ecf0f1; /* Color del texto en un tono claro */
     padding: 0 20px;
 }
 
 /* Header */
 header {
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
+    animation: slide-down 0.5s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 header nav ul {
@@ -37,6 +49,11 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Color de hover en amarillo */
 }
 
 header h1 {
@@ -48,18 +65,35 @@ header h1 {
 section {
     padding: 40px 0;
     text-align: center;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+.fade-in {
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
 }
 
 #about p, #projects p {
     width: 80%;
     margin: 20px auto;
     font-size: 18px;
-    color: #555;
+    color: #ecf0f1; /* Color del texto en un tono claro */
 }
 
 /* Proyectos */
 .project {
     margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project img {
@@ -75,16 +109,17 @@ section {
 
 .project a {
     text-decoration: none;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para los enlaces de proyecto */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .project a:hover {
-    background-color: #555;
+    background-color: #8e44ad; /* Morado */
 }
 
 /* Formulario de contacto */
@@ -97,6 +132,7 @@ form {
 form label {
     display: block;
     margin: 10px 0 5px;
+    color: #ecf0f1; /* Color del texto en un tono claro */
 }
 
 form input, form textarea {
@@ -105,26 +141,32 @@ form input, form textarea {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2980b9; /* Azul eléctrico al hacer foco */
 }
 
 form button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #333;
+    background-color: #2980b9; /* Azul eléctrico */
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #8e44ad; /* Morado */
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el pie de página */
     color: white;
     text-align: center;
     padding: 20px 0;
