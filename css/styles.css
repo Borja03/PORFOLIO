@@ -87,63 +87,189 @@ section {
     color: #ecf0f1; /* Color del texto en un tono claro */
 }
 
-/* Sección: Proyectos */
-#projects {
-    /* background-color: rgba(65, 64, 173, 0.3); */ /* Eliminar el color de fondo */
-    border-radius: 0; /* Sin bordes redondeados para que ocupe todo el ancho */
-    padding: 20px; /* Espacio interno, ajusta según necesidad */
-    margin: 0; /* Elimina márgenes */
-    width: 100%; /* Asegura que el ancho sea del 100% */
-    position: relative; /* Posicionamiento relativo para que el fondo se aplique correctamente */
-    z-index: 1; /* Para que esté por encima de otros elementos */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado de azul eléctrico a morado */
+    color: #ecf0f1; /* Color del texto en un tono claro */
+    padding: 0; /* Eliminar el padding para el body */
+}
 
-/* Opcional: para que la sección mantenga un espacio respecto a otras secciones */
+/* Header */
+header {
+    width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    animation: slide-down 0.5s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* Color de hover en amarillo */
+}
+
+header h1 {
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+/* Secciones */
 section {
-    padding: 40px 0; /* Mantener el espaciado en secciones */
+    padding: 40px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fade-in 1s forwards;
 }
 
+.fade-in {
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+#about p, #projects p {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #ecf0f1; /* Color del texto en un tono claro */
+}
+
+/* Estilo de los proyectos */
 .project {
     margin-bottom: 30px;
     transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-.project h3 {
-    font-size: 24px;
-    margin-top: 10px;
+    text-align: center; /* Alinear texto al centro */
 }
 
 .project a {
     text-decoration: none; /* Sin subrayado */
-    background-color: transparent; /* Cambia a transparente para eliminar el recuadro */
     color: white; /* Color del texto */
-    padding: 0; /* Sin padding para que no haya espacio extra */
-    border: none; /* Sin borde */
     display: inline-block; /* Permite aplicar el efecto de escala */
-    margin-top: 10px;
-    transition: transform 0.3s; /* Solo aplica la transición en la transformación */
+    transition: transform 0.3s; /* Transición suave para el enlace */
 }
 
 .project:hover a {
-    transform: scale(1.05); /* Efecto de escalado al hacer hover */
+    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre el bloque */
 }
 
 .project img {
-    width: 300px; /* Cambia el ancho a 300px */
-    height: auto; /* Ajusta la altura automáticamente */
+    width: 95%; /* Cambiar el ancho a 95% para que ocupe casi todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 800px; /* Máximo ancho para no exceder el contenedor */
     border: none; /* Sin borde alrededor de la imagen */
     border-radius: 0; /* Sin bordes redondeados si deseas que sea completamente rectangular */
     transition: transform 0.3s; /* Transición suave para la imagen */
 }
 
+/* Efecto de escalado específico para la imagen al hacer hover */
 .project:hover img {
     transform: scale(1.05); /* Efecto de escalado al hacer hover sobre la imagen */
 }
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 24px; /* Ajusta el tamaño del texto del título según sea necesario */
+    transition: transform 0.3s; /* Transición suave para el título */
+}
+
+.project:hover h3 {
+    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre el título */
+}
+
+/* Formulario de contacto */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ecf0f1; /* Color del texto en un tono claro */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #2980b9; /* Azul eléctrico al hacer foco */
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2980b9; /* Azul eléctrico */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #8e44ad; /* Morado */
+}
+
+/* Footer */
+footer {
+    width: 100%; /* Asegurarse de que el footer ocupe todo el ancho */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el pie de página */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
 
 
 /* Formulario de contacto */
