@@ -11,11 +11,12 @@ body {
     line-height: 1.6;
     background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado de azul eléctrico a morado */
     color: #ecf0f1; /* Color del texto en un tono claro */
-    padding: 0 20px;
+    padding: 0; /* Eliminar el padding para el body */
 }
 
 /* Header */
 header {
+    width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
     background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
     color: white;
     padding: 40px 0;
@@ -86,7 +87,23 @@ section {
     color: #ecf0f1; /* Color del texto en un tono claro */
 }
 
-/* Proyectos */
+/* Sección: Proyectos */
+#projects {
+    /* background-color: rgba(65, 64, 173, 0.3); */ /* Eliminar el color de fondo */
+    border-radius: 0; /* Sin bordes redondeados para que ocupe todo el ancho */
+    padding: 20px; /* Espacio interno, ajusta según necesidad */
+    margin: 0; /* Elimina márgenes */
+    width: 100%; /* Asegura que el ancho sea del 100% */
+    position: relative; /* Posicionamiento relativo para que el fondo se aplique correctamente */
+    z-index: 1; /* Para que esté por encima de otros elementos */
+}
+
+
+/* Opcional: para que la sección mantenga un espacio respecto a otras secciones */
+section {
+    padding: 40px 0; /* Mantener el espaciado en secciones */
+}
+
 .project {
     margin-bottom: 30px;
     transition: transform 0.3s;
@@ -96,31 +113,38 @@ section {
     transform: scale(1.05);
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
 .project h3 {
     font-size: 24px;
     margin-top: 10px;
 }
 
 .project a {
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para los enlaces de proyecto */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
+    text-decoration: none; /* Sin subrayado */
+    background-color: transparent; /* Cambia a transparente para eliminar el recuadro */
+    color: white; /* Color del texto */
+    padding: 0; /* Sin padding para que no haya espacio extra */
+    border: none; /* Sin borde */
+    display: inline-block; /* Permite aplicar el efecto de escala */
     margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: transform 0.3s; /* Solo aplica la transición en la transformación */
 }
 
-.project a:hover {
-    background-color: #8e44ad; /* Morado */
+.project:hover a {
+    transform: scale(1.05); /* Efecto de escalado al hacer hover */
 }
+
+.project img {
+    width: 300px; /* Cambia el ancho a 300px */
+    height: auto; /* Ajusta la altura automáticamente */
+    border: none; /* Sin borde alrededor de la imagen */
+    border-radius: 0; /* Sin bordes redondeados si deseas que sea completamente rectangular */
+    transition: transform 0.3s; /* Transición suave para la imagen */
+}
+
+.project:hover img {
+    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre la imagen */
+}
+
 
 /* Formulario de contacto */
 form {
@@ -166,6 +190,7 @@ form button:hover {
 
 /* Footer */
 footer {
+    width: 100%; /* Asegurarse de que el footer ocupe todo el ancho */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el pie de página */
     color: white;
     text-align: center;

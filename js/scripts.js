@@ -1,17 +1,23 @@
-// Validación simple del formulario de contacto
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+// scripts.js
 
-    // Obtener los valores del formulario
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+let isScrolling = false;
+const projects = document.querySelectorAll('.project');
+let currentIndex = 0;
 
-    // Validación básica
-    if (name === "" || email === "" || message === "") {
-        alert("Por favor, completa todos los campos.");
-    } else {
-        alert("¡Gracias por contactarme, " + name + "! Me pondré en contacto contigo pronto.");
-        // Puedes enviar los datos a un servidor aquí si lo deseas
+function scrollToProject(index) {
+    if (index < 0 || index >= projects.length) return;
+    isScrolling = true;
+    projects[index].scrollIntoView({ behavior: 'smooth' });
+    currentIndex = index;
+
+    setTimeout(() => {
+        isScrolling = false;
+    }, 1000); // Ajusta el tiempo según la duración de tu desplazamiento
+}
+
+window.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    if (!isScrolling) {
+        scrollToProject(event.deltaY > 0 ? currentIndex + 1 : currentIndex - 1);
     }
 });
