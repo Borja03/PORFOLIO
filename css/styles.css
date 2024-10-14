@@ -126,7 +126,6 @@ section {
     -webkit-background-clip: text; /* Recortar el fondo para que se aplique solo al texto */
     background-clip: text; /* Asegurarse de que el fondo se recorte también en otros navegadores */
     color: transparent; /* Hacer que el color del texto sea transparente */
-    text-decoration: none; /* Eliminar el subrayado */
     font-weight: bold; /* Hacer el texto más destacado */
     text-align: center; /* Alinear el texto al centro */
     line-height: 1.2; /* Ajustar el alto de línea para que haya espacio suficiente */
@@ -137,6 +136,8 @@ section {
     justify-content: center; /* Centrar horizontalmente */
     overflow: hidden; /* Evitar que se corte el contenido */
 }
+
+/* Elimina el subrayado de los enlaces */
 .project a {
     color: inherit; /* Mantener el color heredado, para usar el color del texto */
     text-decoration: none; /* Eliminar subrayado por defecto */
