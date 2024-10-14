@@ -14,7 +14,6 @@ body {
     transition: background 1s ease; /* Suaviza la transición del fondo */
 }
 
-
 /* Header */
 header {
     width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
@@ -44,28 +43,35 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 25px; /* Aumentar el margen lateral de los elementos del menú */
 }
 
+/* Asegurarse de que el enlace normal y visitado no tengan subrayado */
 header nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Color normal del enlace */
+    text-decoration: none; /* Eliminar el subrayado */
     font-size: 18px;
     transition: color 0.3s;
 }
 
+header nav ul li a:visited {
+    color: white; /* Color del enlace visitado */
+    text-decoration: none; /* Eliminar el subrayado en el enlace visitado */
+}
+
 header nav ul li a:hover {
     color: #ffcc00; /* Color de hover en amarillo */
+    text-decoration: none; /* Asegurarse de que no haya subrayado en hover */
 }
 
 header h1 {
-    margin-top: 10px;
+    margin-top: 20px; /* Aumentar el margen superior del título */
     font-size: 36px;
 }
 
 /* Secciones */
 section {
-    padding: 40px 0;
+    padding: 60px 0; /* Aumentar el padding superior e inferior */
     text-align: center;
     opacity: 0;
     animation: fade-in 1s forwards;
@@ -88,177 +94,51 @@ section {
     color: #ecf0f1; /* Color del texto en un tono claro */
 }
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo general */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado de azul eléctrico a morado */
-    color: #ecf0f1; /* Color del texto en un tono claro */
-    padding: 0; /* Eliminar el padding para el body */
-}
-
-/* Header */
-header {
-    width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
-    color: white;
-    padding: 40px 0;
+/* Sección de Proyectos */
+#projects {
+    padding: 60px 0; /* Espaciado superior e inferior */
     text-align: center;
-    animation: slide-down 0.5s ease-in-out;
 }
 
-@keyframes slide-down {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+/* Sección de proyectos */
+.project-wrapper {
+    margin: 20px 0; /* Espaciado vertical entre franjas */
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #ffcc00; /* Color de hover en amarillo */
-}
-
-header h1 {
-    margin-top: 10px;
-    font-size: 36px;
-}
-
-/* Secciones */
-section {
-    padding: 40px 0;
-    text-align: center;
-    opacity: 0;
-    animation: fade-in 1s forwards;
-}
-
-.fade-in {
-    animation: fade-in 1s forwards;
-}
-
-@keyframes fade-in {
-    to {
-        opacity: 1;
-    }
-}
-
-#about p, #projects p {
-    width: 80%;
-    margin: 20px auto;
-    font-size: 18px;
-    color: #ecf0f1; /* Color del texto en un tono claro */
-}
-
-/* Estilo de los proyectos */
+/* Franjas de proyecto */
 .project {
-    margin-bottom: 30px;
-    transition: transform 0.3s;
-    text-align: center; /* Alinear texto al centro */
+    background-color: white; /* Color de fondo blanco */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
 }
 
-.project a {
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Color del texto */
-    display: inline-block; /* Permite aplicar el efecto de escala */
-    transition: transform 0.3s; /* Transición suave para el enlace */
-}
-
-.project:hover a {
-    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre el bloque */
-}
-
-.project img {
-    width: 95%; /* Cambiar el ancho a 95% para que ocupe casi todo el contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 800px; /* Máximo ancho para no exceder el contenedor */
-    border: none; /* Sin borde alrededor de la imagen */
-    border-radius: 0; /* Sin bordes redondeados si deseas que sea completamente rectangular */
-    transition: transform 0.3s; /* Transición suave para la imagen */
-}
-
-/* Efecto de escalado específico para la imagen al hacer hover */
-.project:hover img {
-    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre la imagen */
-}
-
+/* Estilo para los títulos de los proyectos */
 .project h3 {
-    margin-top: 10px;
-    font-size: 24px; /* Ajusta el tamaño del texto del título según sea necesario */
-    transition: transform 0.3s; /* Transición suave para el título */
+    margin: 0; /* Eliminar margen para que ocupe todo el espacio */
+    padding: 0; /* Eliminar padding */
+    font-size: 5vw; /* Tamaño del texto adaptado a la ventana */
+    background-image: linear-gradient(135deg, #2980b9, #8e44ad); /* Color del texto con degradado */
+    -webkit-background-clip: text; /* Recortar el fondo para que se aplique solo al texto */
+    background-clip: text; /* Asegurarse de que el fondo se recorte también en otros navegadores */
+    color: transparent; /* Hacer que el color del texto sea transparente */
+    text-decoration: none; /* Eliminar el subrayado */
+    font-weight: bold; /* Hacer el texto más destacado */
+    text-align: center; /* Alinear el texto al centro */
+    line-height: 1; /* Ajustar el alto de línea para que no haya espacio extra */
+    width: 100%; /* Asegurarse de que el texto ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegurarse de que el texto ocupe todo el alto del contenedor */
+    display: flex; /* Permitir que el texto ocupe todo el contenedor */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
-.project:hover h3 {
-    transform: scale(1.05); /* Efecto de escalado al hacer hover sobre el título */
-}
 
-/* Formulario de contacto */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #ecf0f1; /* Color del texto en un tono claro */
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #2980b9; /* Azul eléctrico al hacer foco */
-}
-
-form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #2980b9; /* Azul eléctrico */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #8e44ad; /* Morado */
+/* Animaciones de hover */
+.project:hover {
+    transform: translateY(-5px); /* Elevar la franja al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
 }
 
 /* Footer */
@@ -271,77 +151,3 @@ footer {
     margin-top: 40px;
 }
 
-
-
-/* Formulario de contacto */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #ecf0f1; /* Color del texto en un tono claro */
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #2980b9; /* Azul eléctrico al hacer foco */
-}
-
-form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #2980b9; /* Azul eléctrico */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #8e44ad; /* Morado */
-}
-
-/* Footer */
-footer {
-    width: 100%; /* Asegurarse de que el footer ocupe todo el ancho */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el pie de página */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.project-container {
-    width: 250px; /* Ajusta el ancho como desees */
-    border: 2px solid #ecf0f1; /* Color del borde */
-    border-radius: 15px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
-    margin: 0 auto; /* Centrar el contenedor */
-    text-align: center; /* Centrar el texto */
-    transition: transform 0.3s; /* Transición suave para el contenedor */
-}
-
-.project-container:hover {
-    transform: scale(1.05); /* Efecto de escalado al hacer hover */
-}
-
-.project img {
-    width: 100%; /* Hacer que la imagen ocupe el 100% del contenedor */
-    height: auto; /* Mantener la proporción */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-}
