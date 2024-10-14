@@ -161,3 +161,64 @@ footer {
     margin-top: 40px;
 }
 
+/* Sección de Contacto */
+#contact {
+    padding: 60px 0; /* Espaciado superior e inferior */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 90% de opacidad */
+    border-radius: 10px;
+    margin: 20px 0; /* Espaciado vertical entre secciones */
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#contact p {
+    font-size: 18px;
+    color: #34495e; /* Color del texto en un tono más oscuro */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.contact-info {
+    font-size: 18px;
+    color: #2c3e50; /* Color del texto en un tono más oscuro */
+}
+
+.contact-info a {
+    color: #2980b9; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Sección: Sobre mí */
+#about {
+    padding: 60px 0; /* Aumentar el padding superior e inferior */
+    text-align: center;
+    margin: 20px 0; /* Espaciado vertical entre secciones */
+}
+
+.about-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 90% de opacidad */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el contenedor ajuste su tamaño al contenido */
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#about p {
+    width: 80%; /* Ajustar el ancho del párrafo */
+    margin: 20px auto; /* Centrar el párrafo */
+    font-size: 18px;
+    color: #34495e; /* Color del texto en un tono más oscuro */
+}
+
+
