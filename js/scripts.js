@@ -1,9 +1,16 @@
-// Array de colores que se van a utilizar en los degradados
+// Array de colores que se van a utilizar en los degradados (solo colores fríos)
 const colors = [
-    ['#2980b9', '#8e44ad'], // Degradado de azul eléctrico a morado
-    ['#e74c3c', '#f39c12'], // Degradado de rojo a naranja
-    ['#2ecc71', '#3498db'], // Degradado de verde a azul claro
-    ['#9b59b6', '#e67e22'], // Degradado de lavanda a naranja oscuro
+    ['#00aaff', '#005577'], // Degradado de azul claro a azul oscuro
+    ['#2ecc71', '#3498db'], // Degradado de verde esmeralda a azul
+    ['#8e44ad', '#00bfff'], // Degradado de púrpura a azul celeste
+    ['#48c6ef', '#005f73'], // Degradado de verde menta a azul
+    ['#003366', '#66b3ff'], // Degradado de azul marino a verde claro
+    ['#2ecc71', '#005f73'], // Degradado de verde esmeralda a azul marino
+    ['#00bfff', '#800080'], // Degradado de azul celeste a púrpura
+    ['#001f3f', '#66ffcc'], // Degradado de azul oscuro a verde claro
+    ['#003366', '#00ffff'], // Degradado de azul a cian
+    ['#00ffff', '#004080'], // Degradado de aqua a azul oscuro
+    ['#001f3f', '#87cefa'], // Degradado de azul noche a azul claro
 ];
 
 let currentGradientIndex = 0; // Índice del degradado actual

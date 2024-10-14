@@ -187,7 +187,7 @@ footer {
 }
 
 .contact-info a {
-    color: #2980b9; /* Color de los enlaces */
+    color: #8727c7; /* Color de los enlaces */
     text-decoration: none; /* Sin subrayado */
 }
 
@@ -203,7 +203,7 @@ footer {
 }
 
 .about-container {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 90% de opacidad */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 90% de opacidad */
     padding: 30px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
     display: inline-block; /* Asegura que el contenedor ajuste su tamaño al contenido */
