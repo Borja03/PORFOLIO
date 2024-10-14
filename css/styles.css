@@ -222,3 +222,31 @@ footer {
 }
 
 
+.about-container {
+    position: relative; /* Para posicionar los elementos dentro de este contenedor */
+    padding: 20px; /* Espacio interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados para el recuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el recuadro */
+}
+
+.images-container {
+    display: flex; /* Usar flexbox para alinear imágenes y texto */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+.about-image {
+    width: 150px; /* Ancho fijo para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.left {
+    margin-right: 20px; /* Espacio a la derecha de la imagen izquierda */
+}
+
+.right {
+    margin-left: 20px; /* Espacio a la izquierda de la imagen derecha */
+}
+
+
