@@ -105,20 +105,23 @@ section {
     margin: 20px 0; /* Espaciado vertical entre franjas */
 }
 
-/* Franjas de proyecto */
+
+/* Mantener el fondo de degradado */
 .project {
-    background-color: white; /* Color de fondo blanco */
-    padding: 30px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el proyecto */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+
 
 /* Estilo para los títulos de los proyectos */
 .project h3 {
     margin: 0; /* Eliminar margen para que ocupe todo el espacio */
     padding: 0; /* Eliminar padding */
-    font-size: 5vw; /* Tamaño del texto adaptado a la ventana */
+    font-size: 5vw; /* Tamaño del texto adaptado a la ventana, ajusta según sea necesario */
     background-image: linear-gradient(135deg, #2980b9, #8e44ad); /* Color del texto con degradado */
     -webkit-background-clip: text; /* Recortar el fondo para que se aplique solo al texto */
     background-clip: text; /* Asegurarse de que el fondo se recorte también en otros navegadores */
@@ -126,14 +129,20 @@ section {
     text-decoration: none; /* Eliminar el subrayado */
     font-weight: bold; /* Hacer el texto más destacado */
     text-align: center; /* Alinear el texto al centro */
-    line-height: 1; /* Ajustar el alto de línea para que no haya espacio extra */
+    line-height: 1.2; /* Ajustar el alto de línea para que haya espacio suficiente */
     width: 100%; /* Asegurarse de que el texto ocupe todo el ancho del contenedor */
-    height: 100%; /* Asegurarse de que el texto ocupe todo el alto del contenedor */
+    height: auto; /* Asegurarse de que el alto se ajuste automáticamente */
     display: flex; /* Permitir que el texto ocupe todo el contenedor */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
+    overflow: hidden; /* Evitar que se corte el contenido */
 }
-
+.project a {
+    color: inherit; /* Mantener el color heredado, para usar el color del texto */
+    text-decoration: none; /* Eliminar subrayado por defecto */
+    display: block; /* Hacer que el enlace ocupe todo el contenedor */
+    width: 100%; /* Asegurarse de que el enlace ocupe todo el ancho */
+}
 
 /* Animaciones de hover */
 .project:hover {
