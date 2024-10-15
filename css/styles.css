@@ -5,23 +5,28 @@
     box-sizing: border-box;
 }
 
+header {
+    width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el encabezado */
+    color: white;
+    padding: 10px 0; /* Disminuir el padding para que sea más delgado */
+    text-align: center;
+    animation: slide-down 0.5s ease-in-out;
+    position: fixed; /* Fijo en la parte superior */
+    top: 0; /* Alinéalos a la parte superior */
+    left: 0; /* Alinéalos a la izquierda */
+    right: 0; /* Alinéalos a la derecha */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    backdrop-filter: blur(10px); /* Aplicar desenfoque al contenido detrás del encabezado */
+}
+/* Asegúrate de que el contenido de la página no quede cubierto por el header */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #2e2c2df3;
     color: #ffffff; /* Color del texto en un tono claro */
-    padding: 0; /* Eliminar el padding para el body */
+    padding-top: 120px; /* Ajusta este valor según la altura de tu header */
     transition: background 1s ease; /* Suaviza la transición del fondo */
-}
-
-/* Header */
-header {
-    width: 100%; /* Asegurarse de que el header ocupe todo el ancho */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el encabezado */
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    animation: slide-down 0.5s ease-in-out;
 }
 
 @keyframes slide-down {
@@ -292,4 +297,6 @@ footer {
     .project h3 {
         font-size: 8vw; /* Ajustar el tamaño del texto para pantallas pequeñas */
     }
+
+    
 }

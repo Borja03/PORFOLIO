@@ -86,3 +86,5 @@ function updateBackgroundGradient() {
 
 // Inicia la actualización del fondo con gradientes
 setInterval(updateBackgroundGradient, stepDuration);
+
+
