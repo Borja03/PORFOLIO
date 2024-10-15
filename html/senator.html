@@ -4,20 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Senator</title>
+    <title>Proyecto</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .content {
+            padding: 30px; /* Espaciado interno del contenido principal */
+            max-width: 1200px; /* Ancho máximo para el contenido */
+            margin: auto; /* Centra el contenido horizontalmente */
+            background-color: white; /* Color de fondo blanco para el contenido */
+            border-radius: 8px; /* Esquinas redondeadas */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+        }
+
+        .media, .code-section {
+            margin-bottom: 40px; /* Espaciado inferior entre secciones */
+            padding: 20px; /* Espaciado interno en cada sección */
+            border: 1px solid #ddd; /* Borde ligero alrededor de cada sección */
+            border-radius: 5px; /* Esquinas redondeadas para las secciones */
+            background-color: #f2f2f2; /* Fondo ligeramente gris para las secciones */
+        }
+
+        .media img, .media video {
+            max-width: 100%; /* Asegura que las imágenes y videos no excedan el ancho del contenedor */
+            height: auto; /* Mantiene la relación de aspecto */
+            margin: 10px 0; /* Espaciado vertical entre imágenes/videos */
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1>SENATOR</h1>
     </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Images Section -->
+        <div class="media">
+            <h2>Imágenes del Proyecto</h2>
+            <img src="../images/senatorIndex.png" alt="Descripción de la imagen 1">
+            <img src="../images/senator2.png" alt="Descripción de la imagen 2">
+        </div>
+
+        <!-- Video Section -->
+        <div class="media">
+            <h2>Videos del Proyecto</h2>
+            <video controls>
+                <source src="../videos/2024-10-15 18-43-25.mkv" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h2>Código del Proyecto</h2>
+            <img src="../images/codeSenator.png" alt="Descripción del código">
+        </div>
+    </div>
+
     <footer>
         <p>© 2024 Borja. Todos los derechos reservados.</p>
     </footer>

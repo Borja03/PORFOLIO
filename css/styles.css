@@ -8,8 +8,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #2980b9, #8e44ad); /* Degradado inicial */
-    color: #ecf0f1; /* Color del texto en un tono claro */
+    background-color: #2e2c2df3;
+    color: #ffffff; /* Color del texto en un tono claro */
     padding: 0; /* Eliminar el padding para el body */
     transition: background 1s ease; /* Suaviza la transición del fondo */
 }
@@ -87,7 +87,8 @@ section {
     }
 }
 
-#about p, #projects p {
+#about p,
+#projects p {
     width: 80%;
     margin: 20px auto;
     font-size: 18px;
@@ -105,17 +106,53 @@ section {
     margin: 20px 0; /* Espaciado vertical entre franjas */
 }
 
-
-/* Mantener el fondo de degradado */
+/* Estilo para los proyectos */
 .project {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el proyecto */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Suavizar la transición */
+    position: relative; /* Necesario para posicionar el texto */
+    overflow: hidden; /* Ocultar el texto al hacer hover */
 }
 
+/* Cambiar el fondo al hacer hover */
+.project:hover {
+    transform: translateY(-5px); /* Elevar la franja al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
+}
 
+/* Fondos de imagen específicos al hacer hover */
+.project.senator:hover {
+    background-image: url('../images/senatorIndex.png'); /* Cambia esta ruta a la imagen del proyecto 1 */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    background-position: center; /* Centra la imagen */
+}
+
+.project.gestor:hover {
+    background-image: url('../images/laLigaIndex.png'); /* Cambia esta ruta a la imagen del proyecto 2 */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    background-position: center; /* Centra la imagen */
+}
+
+.project.discord-bot:hover {
+    background-image: url('../images/discordIndex.png'); /* Cambia esta ruta a la imagen del proyecto 3 */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    background-position: center; /* Centra la imagen */
+}
+
+.project.virgil-abloh:hover {
+    background-image: url('../images/virgilIndex.png'); /* Cambia esta ruta a la imagen del proyecto 4 */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    background-position: center; /* Centra la imagen */
+}
+
+.project.souls-like:hover {
+    background-image: url('../images/soulsIndex.png'); /* Cambia esta ruta a la imagen del proyecto 5 */
+    background-size: cover; /* Asegúrate de que la imagen cubra el área */
+    background-position: center; /* Centra la imagen */
+}
 
 /* Estilo para los títulos de los proyectos */
 .project h3 {
@@ -135,6 +172,13 @@ section {
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
     overflow: hidden; /* Evitar que se corte el contenido */
+    transition: opacity 0s; /* Cambiado a 0s para que sea instantáneo */
+    opacity: 1; /* Hacer que el texto sea visible inicialmente */
+}
+
+/* Ocultar el texto al hacer hover */
+.project:hover h3 {
+    opacity: 0; /* Hacer que el texto desaparezca al pasar el ratón */
 }
 
 /* Elimina el subrayado de los enlaces */
@@ -143,12 +187,6 @@ section {
     text-decoration: none; /* Eliminar subrayado por defecto */
     display: block; /* Hacer que el enlace ocupe todo el contenedor */
     width: 100%; /* Asegurarse de que el enlace ocupe todo el ancho */
-}
-
-/* Animaciones de hover */
-.project:hover {
-    transform: translateY(-5px); /* Elevar la franja al hacer hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
 }
 
 /* Footer */
@@ -161,11 +199,11 @@ footer {
     margin-top: 40px;
 }
 
-/* Sección de Contacto */
+/* Sección: Contacto */
 #contact {
     padding: 60px 0; /* Espaciado superior e inferior */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 90% de opacidad */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 80% de opacidad */
     border-radius: 10px;
     margin: 20px 0; /* Espaciado vertical entre secciones */
 }
@@ -203,50 +241,55 @@ footer {
 }
 
 .about-container {
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 90% de opacidad */
-    padding: 30px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    display: inline-block; /* Asegura que el contenedor ajuste su tamaño al contenido */
-}
-
-#about h2 {
-    font-size: 32px;
-    margin-bottom: 20px; /* Espaciado inferior */
-}
-
-#about p {
-    width: 80%; /* Ajustar el ancho del párrafo */
-    margin: 20px auto; /* Centrar el párrafo */
-    font-size: 18px;
-    color: #34495e; /* Color del texto en un tono más oscuro */
-}
-
-
-.about-container {
-    position: relative; /* Para posicionar los elementos dentro de este contenedor */
-    padding: 20px; /* Espacio interno del contenedor */
-    border-radius: 8px; /* Bordes redondeados para el recuadro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el recuadro */
+    display: flex; /* Flexbox para alinear imágenes y texto */
+    justify-content: space-around; /* Espaciado entre elementos */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
 
 .images-container {
-    display: flex; /* Usar flexbox para alinear imágenes y texto */
-    justify-content: space-between; /* Espaciado entre los elementos */
-    align-items: center; /* Alinear verticalmente al centro */
+    flex: 1; /* Ocupar el mismo espacio en la fila */
+    max-width: 600px; /* Máximo ancho de las imágenes */
+    margin: 0 20px; /* Espaciado lateral */
 }
 
 .about-image {
-    width: 150px; /* Ancho fijo para las imágenes */
-    height: auto; /* Altura automática para mantener la proporción */
-    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    max-width: 100%; /* Hacer que la imagen no exceda el contenedor */
+    height: auto; /* Ajustar altura automáticamente */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
-.left {
-    margin-right: 20px; /* Espacio a la derecha de la imagen izquierda */
+/* Adaptaciones para dispositivos móviles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px; /* Tamaño de fuente del encabezado en pantallas pequeñas */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Espaciado vertical entre elementos del menú */
+    }
+
+    .project h3 {
+        font-size: 6vw; /* Ajustar el tamaño del texto en dispositivos más pequeños */
+    }
+
+    #about {
+        padding: 40px 0; /* Disminuir el padding en pantallas pequeñas */
+    }
+
+    #projects {
+        padding: 30px 0; /* Ajustar el padding para pantallas pequeñas */
+    }
+
+    .project {
+        padding: 20px; /* Reducir el padding para pantallas pequeñas */
+    }
+
+    .project h3 {
+        font-size: 8vw; /* Ajustar el tamaño del texto para pantallas pequeñas */
+    }
 }
-
-.right {
-    margin-left: 20px; /* Espacio a la izquierda de la imagen derecha */
-}
-
-

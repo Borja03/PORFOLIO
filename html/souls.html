@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .content {
+            padding: 20px;
+        }
+        .media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .media img, .media video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .code-section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        code {
+            display: block;
+            white-space: pre-wrap; /* Permite el ajuste de líneas en el código */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>SOULS-LIKE</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Media Section -->
+        <div class="media">
+            <h2>Imágenes y Videos del Proyecto</h2>
+            <img src="ruta/a/tu/imagen1.jpg" alt="Descripción de la imagen 1">
+            <img src="ruta/a/tu/imagen2.jpg" alt="Descripción de la imagen 2">
+            <video controls>
+                <source src="ruta/a/tu/video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h2>Código del Proyecto</h2>
+            <code>
+                // Ejemplo de código en JavaScript
+                function helloWorld() {
+                    console.log('¡Hola, mundo!');
+                }
+                helloWorld();
+            </code>
+            <code>
+                /* Ejemplo de código CSS */
+                body {
+                    background-color: #f4f4f4;
+                }
+            </code>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Borja. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

@@ -1,16 +1,23 @@
-// Array de colores que se van a utilizar en los degradados (solo colores fríos)
 const colors = [
-    ['#00aaff', '#005577'], // Degradado de azul claro a azul oscuro
-    ['#2ecc71', '#3498db'], // Degradado de verde esmeralda a azul
-    ['#8e44ad', '#00bfff'], // Degradado de púrpura a azul celeste
-    ['#48c6ef', '#005f73'], // Degradado de verde menta a azul
-    ['#003366', '#66b3ff'], // Degradado de azul marino a verde claro
-    ['#2ecc71', '#005f73'], // Degradado de verde esmeralda a azul marino
-    ['#00bfff', '#800080'], // Degradado de azul celeste a púrpura
-    ['#001f3f', '#66ffcc'], // Degradado de azul oscuro a verde claro
     ['#003366', '#00ffff'], // Degradado de azul a cian
+    ['#2ecc71', '#3498db'], // Degradado de verde esmeralda a azul
+    ['#00aaff', '#005577'], // Degradado de azul claro a azul oscuro
+    ['#1f4037', '#99f2c8'], // Degradado de verde bosque a verde menta
+    ['#74ebd5', '#acb6e5'], // Degradado de verde agua a azul lavanda
+    ['#8e44ad', '#00bfff'], // Degradado de púrpura a azul celeste
+    ['#003366', '#66b3ff'], // Degradado de azul marino a verde claro
     ['#00ffff', '#004080'], // Degradado de aqua a azul oscuro
+    ['#2980b9', '#6dd5fa'], // Degradado de azul océano a azul celeste claro
     ['#001f3f', '#87cefa'], // Degradado de azul noche a azul claro
+    ['#12c2e9', '#f64f59'], // Degradado de celeste a rosado intenso (esto se puede cambiar)
+    ['#48c6ef', '#005f73'], // Degradado de verde menta a azul
+    ['#00c9ff', '#92fe9d'], // Degradado de azul celeste a verde lima
+    ['#9b59b6', '#2980b9'], // Degradado de lavanda a azul océano
+    ['#00ffcc', '#0099cc'], // Degradado de verde aqua a azul
+    ['#003366', '#66c2ff'], // Degradado de azul marino a azul celeste
+    ['#0072bb', '#2ab0ff'], // Degradado de azul oscuro a azul brillante
+    ['#5f27cd', '#2c3e50'], // Degradado de morado a azul oscuro
+    ['#74ebd5', '#66a6ff'], // Degradado de verde agua a azul cielo
 ];
 
 let currentGradientIndex = 0; // Índice del degradado actual
@@ -56,13 +63,17 @@ function updateBackgroundGradient() {
         b: Math.round(currentColor2.b + (nextColor2.b - currentColor2.b) * ratio)
     };
 
-    // Aplicar el gradiente de colores mezclados al fondo
-    document.body.style.background = `linear-gradient(135deg, rgb(${blendedColor1.r}, ${blendedColor1.g}, ${blendedColor1.b}), rgb(${blendedColor2.r}, ${blendedColor2.g}, ${blendedColor2.b}))`;
+    // Aumentar la opacidad a 0.9
+    const opacity = 1;
+
+    // Aplicar el gradiente de colores mezclados al fondo con opacidad
+    document.body.style.background = `linear-gradient(135deg, rgba(${blendedColor1.r}, ${blendedColor1.g}, ${blendedColor1.b}, ${opacity}), rgba(${blendedColor2.r}, ${blendedColor2.g}, ${blendedColor2.b}, ${opacity})), url('images/ronda.webp')`;
+    document.body.style.backgroundSize = 'cover'; // Asegúrate de que la imagen cubra todo el fondo
 
     // Aplicar el mismo gradiente a los títulos de los proyectos
     const h3Elements = document.querySelectorAll('.project h3');
     h3Elements.forEach((h3) => {
-        h3.style.backgroundImage = `linear-gradient(135deg, rgb(${blendedColor1.r}, ${blendedColor1.g}, ${blendedColor1.b}), rgb(${blendedColor2.r}, ${blendedColor2.g}, ${blendedColor2.b}))`;
+        h3.style.backgroundImage = `linear-gradient(135deg, rgba(${blendedColor1.r}, ${blendedColor1.g}, ${blendedColor1.b}, ${opacity}), rgba(${blendedColor2.r}, ${blendedColor2.g}, ${blendedColor2.b}, ${opacity}))`;
     });
 
     currentStep++;
