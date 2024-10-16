@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .content {
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .media, .code-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        /* Estilo actualizado para imágenes y videos */
+        .media img, .media video, .code-section img {
+            width: 100%; /* Ocupa el 100% del ancho del contenedor */
+            height: auto; /* Mantén la proporción de aspecto */
+            margin: 10px 0;
+        }
+
+        .media {
+            display: flex;
+            justify-content: center; /* Centra las imágenes y videos horizontalmente */
+            flex-direction: column;
+            align-items: center; /* Centra las imágenes y videos verticalmente */
+        }
+
+        .code-section img {
+            max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+            height: auto; /* Mantén la proporción de aspecto */
+        }
+
+        h3 {
+    font-size: 4em; /* Cambia este valor según el tamaño deseado */
+    font-weight: bold;
+    text-align: center; /* Para centrar el texto */
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <!-- Header -->
+<header>
+    <h1>VIRGIL</h1><h2><a href="../index.html" style="text-decoration: none; color: inherit;">VOLVER</a></h2>
+</header>
+
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Images Section -->
+        <div class="media">
+            <h3>Imágenes del Proyecto</h3>
+            <img src="../images/virgil1.webp" alt="Descripción de la imagen 1">
+            <img src="../images/virgil2.webp" alt="Descripción de la imagen 2">
+        </div>
+
+        <!-- Video Section -->
+        <div class="media">
+            <h3>Video del Proyecto</h3>
+            <video controls>
+                <source src="../videos/2024-10-16 16-56-48.mkv" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h3>Código del Proyecto</h3>
+            <img src="../images/vergilcode1.png" alt="Descripción del código">
+            <img src="../images/virgilcode2.png" alt="Descripción del código">
+            <h3>Lenguajes utilizado</h3>
+            <img src="../images/css.png" alt="Descripción de la imagen 1">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Borja. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

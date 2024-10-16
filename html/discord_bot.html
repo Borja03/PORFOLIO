@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto</title>
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .content {
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .media, .code-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        .media img, .media video, .code-section img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        /* Estilo para la primera imagen más pequeña */
+        .img-small {
+            width: 50%; /* Haz que la imagen ocupe la mitad del ancho del contenedor */
+            max-width: 400px; /* También puedes limitar el tamaño máximo */
+        }
+
+        .media {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .code-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            font-size: 4em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Añadir sombra al hacer hover sobre el logo de GitHub */
+        .code-section a img:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+            transition: box-shadow 0.3s ease; /* Animación suave */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>DISCORD-BOT</h1><h2><a href="../index.html" style="text-decoration: none; color: inherit;">VOLVER</a></h2>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Images Section -->
+        <div class="media">
+            <h3>Imágenes del Proyecto</h3>
+            <img src="../images/discord1.png" alt="Descripción de la imagen 1" class="img-small">
+            <img src="../images/discord2.png" alt="Descripción de la imagen 2">
+            <img src="../images/discord3.png" alt="Descripción de la imagen 2">
+        </div>
+
+        <!-- Code Section -->
+        <div class="code-section">
+            <h3>Código del Proyecto</h3>
+            <a href="https://github.com/Borja03/Discord-Bot" target="_blank">
+                <img src="../images/GitHub-logo.png" alt="Descripción de la imagen 1">
+            </a>
+            <h3>Lenguaje utilizado</h3>
+            <img src="../images/javascript.png" alt="Descripción de la imagen 1">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Borja. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
