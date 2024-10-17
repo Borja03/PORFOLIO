@@ -7,54 +7,72 @@
     <title>Proyecto</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        .content {
-            padding: 30px;
-            max-width: 1200px;
-            margin: auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+          body {
+        background-image: url("../images/caballos4.jpg"); /* Reemplaza con la ruta de tu imagen */
+        background-size: cover; /* La imagen cubre todo el contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Fija la imagen al fondo al hacer scroll */
+        height: 100vh; /* Altura del contenedor (puedes ajustarlo según sea necesario) */
+        margin: 0; /* Elimina márgenes por defecto */
+      }
 
-        .media, .code-section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-        }
+      .content {
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
 
-        /* Estilo actualizado para imágenes y videos */
-        .media img, .media video, .code-section img {
-            width: 100%; /* Ocupa el 100% del ancho del contenedor */
-            height: auto; /* Mantén la proporción de aspecto */
-            margin: 10px 0;
-        }
+      .media,
+      .code-section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
 
-        .media {
-            display: flex;
-            justify-content: center; /* Centra las imágenes y videos horizontalmente */
-            flex-direction: column;
-            align-items: center; /* Centra las imágenes y videos verticalmente */
-        }
+      .media img,
+      .media video,
+      .code-section img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
 
-        .code-section img {
-            max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
-            height: auto; /* Mantén la proporción de aspecto */
-        }
+      /* Estilo para la primera imagen más pequeña */
+      .img-small {
+        width: 50%; /* Haz que la imagen ocupe la mitad del ancho del contenedor */
+        max-width: 400px; /* También puedes limitar el tamaño máximo */
+      }
 
-        h3 {
-    font-size: 4em; /* Cambia este valor según el tamaño deseado */
-    font-weight: bold;
-    text-align: center; /* Para centrar el texto */
-    margin-bottom: 20px;
-}
+      .media {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
 
-/* Añadir sombra al hacer hover sobre el logo de GitHub */
-.code-section a img:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
-            transition: box-shadow 0.3s ease; /* Animación suave */
-        }
+      .code-section img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h3 {
+        font-size: 4em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Añadir sombra al hacer hover sobre el logo de GitHub */
+      .code-section a img:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+        transition: box-shadow 0.3s ease; /* Animación suave */
+      }
     </style>
 </head>
 <body>
@@ -97,6 +115,6 @@
         <p>© 2024 Borja. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="../js/scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -29,6 +29,8 @@ body {
     transition: background 1s ease; /* Suaviza la transición del fondo */
 }
 
+
+
 @keyframes slide-down {
     from {
         transform: translateY(-100%);
@@ -113,13 +115,22 @@ section {
 
 /* Estilo para los proyectos */
 .project {
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para el proyecto */
+    background-color: rgb(0, 0, 0, 0.3); /* Fondo semitransparente para el proyecto */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s; /* Suavizar la transición */
     position: relative; /* Necesario para posicionar el texto */
     overflow: hidden; /* Ocultar el texto al hacer hover */
+}
+
+.project-title {
+    background-color: rgb(0, 0, 0, 0.3); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin: 0 auto; /* Centrar horizontalmente */
+    width: fit-content; /* Ajustar ancho al contenido */
 }
 
 /* Cambiar el fondo al hacer hover */
@@ -208,7 +219,7 @@ footer {
 #contact {
     padding: 60px 0; /* Espaciado superior e inferior */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 80% de opacidad */
+    background-color: rgb(0, 0, 0, 0.3); /* Fondo blanco con 80% de opacidad */
     border-radius: 10px;
     margin: 20px 0; /* Espaciado vertical entre secciones */
 }
@@ -220,13 +231,13 @@ footer {
 
 #contact p {
     font-size: 18px;
-    color: #34495e; /* Color del texto en un tono más oscuro */
+    color: #ffffff; /* Color del texto en un tono más oscuro */
     margin-bottom: 30px; /* Espaciado inferior */
 }
 
 .contact-info {
     font-size: 18px;
-    color: #2c3e50; /* Color del texto en un tono más oscuro */
+    color: #ffffff; /* Color del texto en un tono más oscuro */
 }
 
 .contact-info a {
@@ -240,17 +251,38 @@ footer {
 
 /* Sección: Sobre mí */
 #about {
-    padding: 60px 0; /* Aumentar el padding superior e inferior */
+    padding: 60px 0; /* Espaciado superior e inferior */
     text-align: center;
     margin: 20px 0; /* Espaciado vertical entre secciones */
 }
 
+/* Estilo para el recuadro */
 .about-container {
     display: flex; /* Flexbox para alinear imágenes y texto */
-    justify-content: space-around; /* Espaciado entre elementos */
+    justify-content: center; /* Centrar horizontalmente el contenido */
     align-items: center; /* Centrar verticalmente */
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    background-color: rgb(0, 0, 0, 0.3); /* Fondo blanco para el recuadro */
+    padding: 20px 30px; /* Padding aumentado para el recuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para el recuadro */
+    max-width: 500px; /* Aumentar el ancho máximo del recuadro */
+    margin: 0 auto; /* Centrar el recuadro horizontalmente */
 }
+
+/* Color del texto en azul más oscuro */
+#about h1 {
+    color: #ffffff; /* Azul oscuro para el título */
+}
+
+#about p {
+    width: 100%; /* Ajustar el ancho del texto al 100% */
+    margin: 10px 0; /* Espaciado vertical entre párrafos */
+    font-size: 18px;
+    color: #ffffff; /* Azul oscuro para el texto */
+}
+
+
 
 .images-container {
     flex: 1; /* Ocupar el mismo espacio en la fila */
