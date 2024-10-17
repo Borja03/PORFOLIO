@@ -296,18 +296,25 @@ footer {
     border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
+
 /* Adaptaciones para dispositivos móviles */
 @media (max-width: 768px) {
+    header {
+        padding: 5px 0; /* Reducir el padding superior e inferior del header */
+        font-size: 16px; /* Ajustar el tamaño de la fuente del header */
+    }
+
     header h1 {
-        font-size: 28px; /* Tamaño de fuente del encabezado en pantallas pequeñas */
+        font-size: 24px; /* Tamaño de fuente del encabezado en pantallas pequeñas */
     }
 
     header nav ul {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        flex-direction: row; /* Asegurarse de que el menú esté en fila */
+        justify-content: center; /* Centrar el menú horizontalmente */
     }
 
     header nav ul li {
-        margin: 10px 0; /* Espaciado vertical entre elementos del menú */
+        margin: 0 10px; /* Reducir el margen lateral entre los elementos del menú */
     }
 
     .project h3 {
@@ -329,6 +336,5 @@ footer {
     .project h3 {
         font-size: 8vw; /* Ajustar el tamaño del texto para pantallas pequeñas */
     }
-
-    
 }
+
