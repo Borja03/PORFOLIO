@@ -302,6 +302,11 @@ footer {
     header {
         padding: 5px 0; /* Reducir el padding superior e inferior del header */
         font-size: 16px; /* Ajustar el tamaño de la fuente del header */
+        position: absolute; /* Cambiar a posición absoluta para que no se desplace con el scroll */
+        top: 0; /* Asegurarse de que esté en la parte superior */
+        left: 0; /* Alinear a la izquierda */
+        right: 0; /* Alinear a la derecha */
+        z-index: 1000; /* Mantener el índice z alto para que esté por encima de otros elementos */
     }
 
     header h1 {
@@ -337,4 +342,6 @@ footer {
         font-size: 8vw; /* Ajustar el tamaño del texto para pantallas pequeñas */
     }
 }
+
+
 
